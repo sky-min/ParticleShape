@@ -1,0 +1,7 @@
+---
+name: ParticleShape
+version: 0.0.1
+main: skymin\ParticleShape\Loader
+api: 5.0.0
+src-namespace-prefix: skymin\ParticleShape
+...

@@ -7,6 +7,10 @@ namespace skymin\ParticleShape\shapes;
 use Generator;
 use pocketmine\math\Vector3;
 use skymin\ParticleShape\utils\Utils;
+use function atan2;
+use function cos;
+use function sqrt;
+use function sin;
 
 final class Straight implements Shape{
 

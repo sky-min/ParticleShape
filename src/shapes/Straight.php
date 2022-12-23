@@ -17,7 +17,7 @@ final class Straight implements Shape{
 	public function __construct(
 		private readonly Vector3 $start,
 		private readonly Vector3 $stop,
-		private readonly int $count
+		private readonly int $particleCount
 	){}
 
 	/** @return Generator<Vector3> */
@@ -33,7 +33,7 @@ final class Straight implements Shape{
 		$yaw = atan2(-$x, $z);
 		$pitch = -atan2($y, $xz_modulus);
 		$distance = $this->start->distance($this->stop);
-		foreach(Utils::linspaceForGenerator(0, $distance, $this->count) as $n){
+		foreach(Utils::linspaceForGenerator(0, $distance, $this->particleCount) as $n){
 			yield new Vector3(
 				$start_x - $n * (-sin($yaw)),
 				$start_y - $n * (-sin($pitch)),

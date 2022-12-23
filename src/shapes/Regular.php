@@ -28,7 +28,7 @@ final class Regular implements Shape{
 			0,
 			$this->radius * cos(0)
 		);
-		for($i = 0; $i < 360; $i += $round){
+		for($i = 0; $i <= 360; $i += $round){
 			if($i === 0) continue;
 			$rad = deg2rad($i);
 			$pos2 = new Vector3(

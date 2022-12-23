@@ -17,15 +17,15 @@ final class Spiral implements Shape{
 		private readonly float $radius,
 		private readonly float $theta,
 		private readonly float $cutRadius,
-		private readonly int $count = 360
+		private readonly int $particleCount = 360
 	){}
 
 	/**
 	 * @return Generator<Vector2>
 	 */
 	public function getPositions() : Generator{
-		$thetas = Utils::linspace(0, $this->theta, $this->count);
-		foreach(Utils::linspace($this->cutRadius, $this->radius, $this->count) as $key => $r){
+		$thetas = Utils::linspace(0, $this->theta, $this->particleCount);
+		foreach(Utils::linspace($this->cutRadius, $this->radius, $this->particleCount) as $key => $r){
 			if(!isset($thetas[$key])) break;
 			$rad = deg2rad($thetas[$key]);
 			yield new Vector2(

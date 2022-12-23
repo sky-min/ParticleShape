@@ -31,12 +31,12 @@ final class Utils{
 		$step = ($stop - $start) / ($num - 1);
 		if($start === $stop){
 			throw new \InvalidArgumentException('start and stop values cannot be the same.');
-		}elseif($start < $stop){
+		}elseif($start <= $stop){
 			for(; $stop > $start; $start += $step){
 				yield $start;
 			}
 		}else{
-			for(; $stop < $start; $start += $step){
+			for(; $stop <= $start; $start += $step){
 				yield $start;
 			}
 		}
